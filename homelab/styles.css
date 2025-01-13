@@ -50,3 +50,35 @@ body {
     margin-bottom: 20px;
   }
 }
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333; /* Changed to a dark color */
+    padding: 10px;
+}
+
+.logo {
+    max-width: 100px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+.links {
+    display: flex;
+    gap: 15px;
+    margin-right: auto;
+}
+
+.banner::before {
+    content: "\1F30D"; /* Earth emoji */
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #f2f2f2; /* Changed to a light color */
+}
+
