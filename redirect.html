@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction en cours</title>
+    <style>
+        .message {
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .dots {
+            display: inline-block;
+            animation: dotAnimation 1.5s infinite steps(1, end);
+        }
+
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-left: 5px;
+            background-color: black;
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        @keyframes dotAnimation {
+            0% {
+                opacity: 0;
+            }
+            33% {
+                opacity: 1;
+            }
+            66% {
+                opacity: 2;
+            }
+            100% {
+                opacity: 3;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="message">
+        Construction en cours
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+</body>
+</html>
