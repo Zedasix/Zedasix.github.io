@@ -5,41 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Construction en cours</title>
     <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
         .message {
             font-size: 24px;
             font-family: Arial, sans-serif;
             color: #333;
             text-align: center;
-            margin-top: 50px;
         }
 
         .dots {
             display: inline-block;
-            animation: dotAnimation 1.5s infinite steps(1, end);
         }
 
-        .dot {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            margin-left: 5px;
-            background-color: black;
-            border-radius: 50%;
-            opacity: 0;
+        .dots:after {
+            content: ".";
+            color: black; /* Couleur des points */
+            animation: dotsAnimation 1.5s steps(4, end) infinite;
         }
 
-        @keyframes dotAnimation {
+        @keyframes dotsAnimation {
             0% {
-                opacity: 0;
+                content: ".";
             }
             33% {
-                opacity: 1;
+                content: "..";
             }
             66% {
-                opacity: 2;
+                content: "...";
             }
             100% {
-                opacity: 3;
+                content: ".";
             }
         }
 
@@ -49,11 +52,7 @@
 
     <div class="message">
         Construction en cours
-        <div class="dots">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
+        <span class="dots"></span>
     </div>
 
 </body>
