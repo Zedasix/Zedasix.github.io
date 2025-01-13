@@ -23,26 +23,27 @@
 
         .dots {
             display: inline-block;
+            font-size: 24px;
+            color: black; /* Couleur des points */
         }
 
         .dots:after {
-            content: ".";
-            color: black; /* Couleur des points */
-            animation: dotsAnimation 1.5s steps(4, end) infinite;
+            content: "";
+            animation: dotsAnimation 2s steps(3, end) infinite;
         }
 
         @keyframes dotsAnimation {
             0% {
-                content: ".";
+                content: "";
             }
             33% {
-                content: "..";
+                content: ".";
             }
             66% {
-                content: "...";
+                content: "..";
             }
             100% {
-                content: ".";
+                content: "...";
             }
         }
 
